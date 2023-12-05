@@ -2,6 +2,8 @@ package questao3;
 
 import model.Perfil;
 
+//CONCRETESTRATEGY EM STRATEGY
+
 public class NaoVerificadoStrategy implements NivelPerfilStrategy{
 
 	private Perfil perfil;

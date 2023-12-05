@@ -7,6 +7,9 @@ import java.util.Iterator;
 import model.Documento;
 import model.CartaoCredito;
 
+//CONCRETESTRATEGY EM STRATEGY
+
+
 public class PrataStrategy implements NivelPerfilStrategy{
 
 	private Perfil perfil;

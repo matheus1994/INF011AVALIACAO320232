@@ -5,6 +5,9 @@ import model.CPF;
 import model.Documento;
 import model.Perfil;
 
+//CONCRETESTRATEGY EM STRATEGY
+
+
 public class OuroStrategy implements NivelPerfilStrategy{
 	
 	private Perfil perfil;
