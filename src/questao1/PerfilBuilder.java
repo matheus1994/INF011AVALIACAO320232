@@ -6,7 +6,9 @@ import model.EMail;
 import model.Perfil;
 import model.RG;
 
-public class PerfilBuilder {
+//CONCRETEBUILDER EM BUILDER
+
+public class PerfilBuilder implements Builder{
 	
     private Perfil perfil;
     

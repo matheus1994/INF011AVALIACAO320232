@@ -1,5 +1,7 @@
 package model;
 
+
+
 public class CPF implements Documento{
 	
 	public String nome;
