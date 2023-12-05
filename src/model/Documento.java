@@ -1,5 +1,7 @@
 package model;
 
+//COMPONENT EM DECORATOR
+
 public interface Documento {
 
 	public String formatar();
