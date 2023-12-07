@@ -2,6 +2,10 @@ package questao3;
 
 import model.Perfil;
 
+//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO STRATEGY
+//CONCRETESTRATEGY EM STRATEGY
+
+
 public class BronzeStrategy implements NivelPerfilStrategy{
 	
 	private Perfil perfil;
@@ -15,7 +19,7 @@ public class BronzeStrategy implements NivelPerfilStrategy{
 	@Override
 	public NivelPerfilStrategy nivel() {
 		
-		Integer pontuacao = perfil.documentos()
+		Integer pontuacao = this.perfil.documentos()
                 .filter(doc->doc.validar())
                 .mapToInt(doc->doc.pontuar())
                 .sum();

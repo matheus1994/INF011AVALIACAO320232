@@ -1,5 +1,6 @@
 package questao3;
 
+//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO STRATEGY
 //CONTEXT EM STRATEGY
 
 public class Context {

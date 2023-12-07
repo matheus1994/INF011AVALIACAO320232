@@ -1,6 +1,6 @@
 package model;
 
-//COMPONENT EM DECORATOR
+//COMPONENT EM DECORATOR, EM RELAÇÃO A SEGUNDA QUESTÃO
 
 public interface Documento {
 

@@ -3,10 +3,6 @@ package model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-
-//PRDOUTCT EM BUILDER
-
-
 public class CartaoCredito implements Documento{
 	
 	public String nome;

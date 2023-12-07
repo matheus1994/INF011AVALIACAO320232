@@ -5,6 +5,7 @@ import model.CartaoCredito;
 import model.EMail;
 import model.RG;
 
+//NA PRIMEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO BUILDER
 // DIRECTOR EM BUILDER
 
 public class Director {

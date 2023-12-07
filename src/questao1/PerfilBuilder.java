@@ -6,6 +6,7 @@ import model.EMail;
 import model.Perfil;
 import model.RG;
 
+//NA PRIMEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO BUILDER
 //CONCRETEBUILDER EM BUILDER
 
 public class PerfilBuilder implements Builder{

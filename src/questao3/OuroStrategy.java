@@ -5,6 +5,7 @@ import model.CPF;
 import model.Documento;
 import model.Perfil;
 
+//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO STRATEGY
 //CONCRETESTRATEGY EM STRATEGY
 
 
@@ -20,7 +21,6 @@ public class OuroStrategy implements NivelPerfilStrategy{
 	public NivelPerfilStrategy nivel() {
 		
 		boolean hasCPF = false;
-		Integer qtdeCC = 0;
 		Integer pontuacao = this.perfil.documentos()
 				                  .filter(doc->doc.validar())
 				                  .mapToInt(doc->doc.pontuar())

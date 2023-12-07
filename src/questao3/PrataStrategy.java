@@ -7,6 +7,7 @@ import java.util.Iterator;
 import model.Documento;
 import model.CartaoCredito;
 
+//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO STRATEGY
 //CONCRETESTRATEGY EM STRATEGY
 
 
