@@ -1,7 +1,10 @@
 package questao1;
 
+import java.util.List;
+
 import model.CPF;
 import model.CartaoCredito;
+import model.Documento;
 import model.EMail;
 import model.Perfil;
 import model.RG;
@@ -21,7 +24,7 @@ public class PerfilBuilder implements Builder{
     	
     	int cont = 0;
     	
-    	while(cont < 1) {
+    	while(cont <= 1) {
     		this.perfil.adicionar(cpf);
     		cont++;
     	}
@@ -33,7 +36,7 @@ public class PerfilBuilder implements Builder{
        
     	int cont = 0;
     	
-    	while(cont < 1) {
+    	while(cont <= 1) {
     		this.perfil.adicionar(rg);
     		cont++;
     	}
@@ -44,7 +47,7 @@ public class PerfilBuilder implements Builder{
          
     	int cont = 0;
     	
-    	while(cont < 3) {
+    	while(cont <= 3) {
     		this.perfil.adicionar(cartao);
     		cont++;
     	}
@@ -54,14 +57,17 @@ public class PerfilBuilder implements Builder{
        
     	int cont = 0;
     	
-    	while(cont < 2) {
+    	while(cont <= 2) {
     		this.perfil.adicionar(email);
     		cont++;
     	}
     }
 
-    public Perfil construir() {
-        return perfil;
+    public Perfil getPerfil(String nome, String user, String pwd, List<Documento> documentos) {
+        
+    	Perfil perfil = new Perfil(nome, user, pwd, documentos);
+    	
+    	return perfil;
     }
 
 
