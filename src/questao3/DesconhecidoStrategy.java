@@ -8,11 +8,33 @@ import model.Perfil;
 
 public class DesconhecidoStrategy implements NivelPerfilStrategy{
 	
-	@Override
-	public NivelPerfilStrategy nivel() {
-		// TODO Auto-generated method stub
-		return new DesconhecidoStrategy();
+	private Perfil perfil;
+	
+	public DesconhecidoStrategy(Perfil perfil) {
+		this.perfil = perfil;
 	}
+
+	@Override
+	public NivelPerfilStrategy nivel(String usuario, String senha) {
+        
+		boolean validade = this.equals(usuario, senha);
+		
+		if(!validade) {
+			return new DesconhecidoStrategy(this.perfil);
+		}
+		
+		else {
+			return null;
+		}
+		
+	}
+	
+	private boolean equals(String usuario, String senha) {
+		return this.perfil.getUser().equals(usuario) &&
+			   this.perfil.getPwd().equals(senha);
+		
+	}
+
 	
 	
 

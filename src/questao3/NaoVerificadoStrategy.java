@@ -14,10 +14,12 @@ public class NaoVerificadoStrategy implements NivelPerfilStrategy{
 	}
 	
 	@Override
-	public NivelPerfilStrategy nivel() {
+	public NivelPerfilStrategy nivel(String usuario, String senha) {
 		if(this.perfil == null)
 			return new NaoVerificadoStrategy(this.perfil);
-		return null;
+		else {
+			return null;
+		}
 	}
 
 	

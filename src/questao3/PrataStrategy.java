@@ -20,7 +20,10 @@ public class PrataStrategy implements NivelPerfilStrategy{
 	}
 
 	@Override
-	public NivelPerfilStrategy nivel() {
+	public NivelPerfilStrategy nivel(String usuario, String senha) {
+		
+		boolean validade = this.equals(usuario, senha);
+		
 		Integer qtdeCC = 0;
 		Integer pontuacao = this.perfil.documentos()
 				                  .filter(doc->doc.validar())
@@ -33,9 +36,19 @@ public class PrataStrategy implements NivelPerfilStrategy{
 				qtdeCC++;
 		}
 		
-		if(qtdeCC >= 1 && pontuacao >=50)
+		if(validade && qtdeCC >= 1 && pontuacao >=50) {
 			return new PrataStrategy(this.perfil);
-		return null;
+		}
+		
+		else {
+			return new DesconhecidoStrategy(this.perfil);
+		}
 	}
 
+	private boolean equals(String usuario, String senha) {
+		return this.perfil.getUser().equals(usuario) &&
+			   this.perfil.getPwd().equals(senha);
+		
+	}
+	
 }

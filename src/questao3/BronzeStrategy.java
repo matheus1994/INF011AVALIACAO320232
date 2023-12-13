@@ -16,18 +16,31 @@ public class BronzeStrategy implements NivelPerfilStrategy{
 
 
 
-	@Override
-	public NivelPerfilStrategy nivel() {
+	public NivelPerfilStrategy nivel(String usuario, String senha) {
 		
-		Integer pontuacao = this.perfil.documentos()
-                .filter(doc->doc.validar())
-                .mapToInt(doc->doc.pontuar())
-                .sum();
+		boolean validade = this.equals(usuario, senha);
 		
-		if(pontuacao >=3)
+		
+			Integer pontuacao = this.perfil.documentos()
+	                .filter(doc->doc.validar())
+	                .mapToInt(doc->doc.pontuar())
+	                .sum();
+			
+	    if(validade && pontuacao >=3) {
 			return new BronzeStrategy(this.perfil);
-		return null;
+	    }
+	
+		
+		else {
+			return new DesconhecidoStrategy(this.perfil);
+		}
 		
 	}
 
+	private boolean equals(String usuario, String senha) {
+		return this.perfil.getUser().equals(usuario) &&
+			   this.perfil.getPwd().equals(senha);
+		
+	}
+	
 }
