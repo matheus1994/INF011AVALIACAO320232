@@ -1,11 +1,13 @@
 package service;
 
 import java.util.Iterator;
-
 import model.Documento;
 import model.Perfil;
 import model.CPF;
 import model.CartaoCredito;
+
+//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO PROXY
+//REALSUBJECT EM PROXY
 
 public class ClassificadorPerfil implements Classificador{
 	
@@ -15,9 +17,7 @@ private Perfil perfil;
 		this.perfil = perfil;
 	}
 	
-	
-	
-	
+
 	public NivelPerfil nivel() {
 		boolean hasCPF = false;
 		Integer qtdeCC = 0;
