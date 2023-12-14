@@ -2,6 +2,8 @@ package model;
 
 import java.util.regex.Pattern;
 
+import questao2.IVisitor;
+
 public class EMail implements Documento{
 
 public static final String REGEX = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"; 
@@ -37,6 +39,11 @@ public static final String REGEX = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#
 
 	public String getConta() {
 		return conta;
+	}
+
+	@Override
+	public void aceitar(IVisitor ivisitor) {
+		ivisitor.visitEmail(this);
 	}
 	
 	

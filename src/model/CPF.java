@@ -1,6 +1,6 @@
 package model;
 
-
+import questao2.IVisitor;
 
 public class CPF implements Documento{
 	
@@ -84,6 +84,12 @@ public class CPF implements Documento{
 
 	public String getNumero() {
 		return numero;
+	}
+
+
+	@Override
+	public void aceitar(IVisitor ivisitor) {
+		ivisitor.visitCPF(this);
 	}
 
 }

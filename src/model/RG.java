@@ -3,6 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import questao2.IVisitor;
+
 public class RG implements Documento{
 	
 	public String nome;
@@ -66,6 +68,12 @@ public class RG implements Documento{
 
 	public LocalDate getValidade() {
 		return validade;
+	}
+
+
+	@Override
+	public void aceitar(IVisitor ivisitor) {
+		ivisitor.visitRG(this);
 	}
 	
 

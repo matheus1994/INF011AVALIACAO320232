@@ -3,6 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import questao2.IVisitor;
+
 public class CartaoCredito implements Documento{
 	
 	public String nome;
@@ -77,6 +79,11 @@ public class CartaoCredito implements Documento{
 
 	public LocalDate getVencimento() {
 		return vencimento;
+	}
+
+	@Override
+	public void aceitar(IVisitor ivisitor) {
+		ivisitor.visitCartaoCredito(this);
 	}
 	
 
