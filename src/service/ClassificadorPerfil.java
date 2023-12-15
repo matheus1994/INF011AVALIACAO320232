@@ -6,12 +6,9 @@ import model.Perfil;
 import model.CPF;
 import model.CartaoCredito;
 
-//NA TERCEIRA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO PROXY
-//REALSUBJECT EM PROXY
-
 public class ClassificadorPerfil implements Classificador{
 	
-private Perfil perfil;
+    private Perfil perfil;
 	
 	public ClassificadorPerfil(Perfil perfil) {
 		this.perfil = perfil;
