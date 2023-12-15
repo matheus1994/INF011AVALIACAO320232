@@ -15,6 +15,7 @@ import model.RG;
 public class PerfilBuilder implements Builder{
 	
     private Perfil perfil;
+    private List<Documento> docs;
     
     public PerfilBuilder(Perfil perfil) {
     	this.perfil = perfil;
@@ -69,6 +70,7 @@ public class PerfilBuilder implements Builder{
     	
     	return perfil;
     }
-
+    
+  
 
 }
