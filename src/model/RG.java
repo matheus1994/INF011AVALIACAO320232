@@ -3,7 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import questao2.IVisitor;
+//NA SEGUNDA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO DECORATOR
+//CONCRETECOMPONENT EM DECORATOR
 
 public class RG implements Documento{
 	
@@ -70,11 +71,5 @@ public class RG implements Documento{
 		return validade;
 	}
 
-
-	@Override
-	public void aceitar(IVisitor ivisitor) {
-		ivisitor.visitRG(this);
-	}
-	
 
 }

@@ -1,6 +1,7 @@
 package model;
 
-import questao2.IVisitor;
+//NA SEGUNDA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO DECORATOR
+//CONCRETECOMPONENT EM DECORATOR
 
 public class CPF implements Documento{
 	
@@ -84,12 +85,6 @@ public class CPF implements Documento{
 
 	public String getNumero() {
 		return numero;
-	}
-
-
-	@Override
-	public void aceitar(IVisitor ivisitor) {
-		ivisitor.visitCPF(this);
 	}
 
 }

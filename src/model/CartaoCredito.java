@@ -3,7 +3,8 @@ package model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import questao2.IVisitor;
+//NA SEGUNDA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO DECORATOR
+//CONCRETECOMPONENT EM DECORATOR
 
 public class CartaoCredito implements Documento{
 	
@@ -79,11 +80,6 @@ public class CartaoCredito implements Documento{
 
 	public LocalDate getVencimento() {
 		return vencimento;
-	}
-
-	@Override
-	public void aceitar(IVisitor ivisitor) {
-		ivisitor.visitCartaoCredito(this);
 	}
 	
 

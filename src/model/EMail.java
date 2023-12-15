@@ -2,7 +2,8 @@ package model;
 
 import java.util.regex.Pattern;
 
-import questao2.IVisitor;
+//NA SEGUNDA QUESTÃO FOI UTILIZADO O PADRÃO DE PROJETO DECORATOR
+//CONCRETECOMPONENT EM DECORATOR
 
 public class EMail implements Documento{
 
@@ -40,12 +41,5 @@ public static final String REGEX = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#
 	public String getConta() {
 		return conta;
 	}
-
-	@Override
-	public void aceitar(IVisitor ivisitor) {
-		ivisitor.visitEmail(this);
-	}
-	
-	
 
 }
